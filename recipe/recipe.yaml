@@ -13,13 +13,16 @@ source:
   - url: https://raw.githubusercontent.com/jmespath/go-jmespath/b89213a6ec69212a244ef0d07d893bef7f2d9091/LICENSE
     sha256: cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30
     file_name: LICENSE-jmespath
+  - url: https://raw.githubusercontent.com/jackpal/go-nat-pmp/e04deda90d5683d6e375732740814a89eea7bafd/LICENSE
+    sha256: 1596ea320a3d9e5180576b2c6dd28aa34b9edcef27693fcd0474e24bda3fdcab
+    file_name: LICENSE-nat-pmp
 
 build:
   number: 0
   script:
     - cd src
     - cd client
-    - go-licenses save . --save_path ../../library_licenses --ignore github.com/jmespath/go-jmespath
+    - go-licenses save . --save_path ../../library_licenses --ignore github.com/jmespath/go-jmespath --ignore github.com/jackpal/go-nat-pmp
     - if: unix
       then: go build -v -o $PREFIX/bin/netbird -ldflags="-s -w"
       else: go build -v -o %LIBRARY_BIN%\netbird.exe -ldflags="-s"
