@@ -1,6 +1,6 @@
 context:
   name: netbird
-  version: "0.74.5"
+  version: "0.74.6"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://github.com/netbirdio/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 7248f1b01cdf830a43a761e0d7bf6b56bd1ba2fd472156185665a6c193052c2d
+    sha256: 5411df9359174be55f4cb6aab48ee4d0a51bea27a7cd36c8dcf3615e3848d7cd
     target_directory: src
   - url: https://raw.githubusercontent.com/jmespath/go-jmespath/b89213a6ec69212a244ef0d07d893bef7f2d9091/LICENSE
     sha256: cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30
