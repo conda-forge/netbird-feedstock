@@ -29,7 +29,7 @@ build:
 
 requirements:
   build:
-    - ${{ compiler("go-nocgo") }} 1.25.*
+    - ${{ compiler("go-nocgo") }} >=1.26
     - go-licenses
 
 tests:
